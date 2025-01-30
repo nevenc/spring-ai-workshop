@@ -1,0 +1,97 @@
+#@ load("@ytt:data", "data")
+#@ load("@ytt:json", "json")
+#@ load("@ytt:base64", "base64")
+---
+apiVersion: training.educates.dev/v1beta1
+kind: Workshop
+metadata:
+  name: "spring-application-advisor"
+spec:
+  title: "Spring Application Advisor Introduction"
+  description: "A workshop that demonstrates how Spring Application Advisor can help you to  continuously and incrementally upgrade Spring application dependencies, source code and configuration"
+  publish:
+    image: "$(image_repository)/spring-application-advisor-files:$(workshop_version)"
+  workshop:
+    image: "ghcr.io/timosalm/spring-application-advisor-workshop/workshop-image:main"
+    files:
+    - git:
+        url: https://github.com/timosalm/spring-application-advisor-workshop
+        ref: origin/main
+      includePaths:
+      - /workshop/**
+  environment: 
+    secrets:
+    - name: spring-application-advisor-workshop-image-pull-secret
+      namespace: educates
+  session:
+    namespaces:
+      budget: large
+      security:
+        token:
+          enabled: false
+        policy: baseline
+    resources:
+      memory: 4Gi
+    ingresses:
+    - name: petclinic
+      port: 8080
+    - name: app-advisor-server
+      protocol: http
+      host: app-advisor.$(session_namespace)
+      port: 8080
+      authentication:
+        type: none
+    applications:
+      terminal:
+        enabled: true
+        layout: split
+      editor:
+        enabled: true
+      git:
+        enabled: true
+    patches:
+      imagePullSecrets:
+      - name: spring-application-advisor-workshop-image-pull-secret
+    objects:
+    - apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: app-advisor
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app.kubernetes.io/name: app-advisor
+        template:
+          metadata:
+            labels:
+              app.kubernetes.io/name: app-advisor
+          spec:
+            imagePullSecrets:
+            - name: spring-application-advisor-workshop-image-pull-secret
+            containers:
+            - name: workload
+              image: ghcr.io/timosalm/spring-application-advisor-workshop/app-advisor-server-image:main
+              imagePullPolicy: Always
+              ports:
+              - containerPort: 8080
+    - apiVersion: v1
+      kind: Service
+      metadata:
+        name: app-advisor
+      spec:
+        selector:
+          app.kubernetes.io/name: app-advisor
+        ports:
+          - protocol: TCP
+            port: 8080
+            targetPort: 8080
+    - apiVersion: v1
+      kind: Secret
+      metadata:
+        name: spring-application-advisor-workshop-image-pull-secret
+      type: kubernetes.io/dockerconfigjson
+      data:
+        #@ registry_creds = {"username": data.values.sensitive.workshops.spring_app_advisor.workshop_image.username, "password": data.values.sensitive.workshops.spring_app_advisor.workshop_image.password}
+        #@ encoded_creds = base64.encode(json.encode({"auths": {"ghcr.io": registry_creds}}))
+        .dockerconfigjson: #@ encoded_creds

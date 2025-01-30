@@ -1,0 +1,16 @@
+pathways:
+  default: workshop
+
+  paths:
+    workshop:
+      title: "Workshop"
+
+      steps:
+      - 00-workshop-overview
+      - 01-running-the-lab
+      - 02-important-ai-concepts
+      - 03-step-1
+      - 04-step-2
+      - 05-step-3
+      - 06-step-4
+      - 99-workshop-summary
