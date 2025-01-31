@@ -11,7 +11,8 @@ spec:
     image: jdk21-environment:*
     files:
     - git:
-        url: https://github.com/nevenc/spring-ai-workshop
+        #url: https://github.com/nevenc/spring-ai-workshop
+        url: https://github.com/timosalm/spring-ai-workshop
         ref: origin/main
       includePaths:
       - /workshop/**
