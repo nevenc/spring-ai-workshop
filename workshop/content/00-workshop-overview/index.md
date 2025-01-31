@@ -6,11 +6,11 @@ title: Introduction to Spring AI
 
 
 ```execute
-curl -X POST http://llama.{{< param session_namespace >}}/api/generate \
+curl -X POST http://llama.{{< param session_namespace >}}:11434/api/generate \
      -H "Content-Type: application/json" \
      -d '{
            "model": "llama3.1",
-           "prompt": "What is Spring AI?",
+           "prompt": "Tell me in as few words as possible what AI is.",
            "stream": false
          }'
 ```

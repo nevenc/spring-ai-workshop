@@ -20,19 +20,6 @@ spec:
       budget: xxx-large
       security:
         policy: baseline
-    ingresses:
-    - name: llama
-      protocol: http
-      host: llama.$(session_namespace)
-      port: 11434
-      authentication:
-        type: none
-    - name: vector-store
-      protocol: http
-      host: vector-store.$(session_namespace)
-      port: 6379
-      authentication:
-        type: none
     applications:
       terminal:
         enabled: true
