@@ -6,7 +6,7 @@ title: Introduction to Spring AI
 
 
 ```execute
-curl -X POST https://llama-{{ session_hostname }}/api/generate \
+curl -X POST https://llama-{{< param session_hostname >}}/api/generate \
      -H "Content-Type: application/json" \
      -d '{
            "model": "llama3.1",
