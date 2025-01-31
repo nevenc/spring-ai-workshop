@@ -11,8 +11,7 @@ spec:
     image: jdk21-environment:*
     files:
     - git:
-        #url: https://github.com/nevenc/spring-ai-workshop
-        url: https://github.com/timosalm/spring-ai-workshop
+        url: https://github.com/nevenc/spring-ai-workshop
         ref: origin/main
       includePaths:
       - /workshop/**
@@ -26,6 +25,12 @@ spec:
       protocol: http
       host: llama.$(session_namespace)
       port: 11434
+      authentication:
+        type: none
+    - name: vector-store
+      protocol: http
+      host: vector-store.$(session_namespace)
+      port: 6379
       authentication:
         type: none
     applications:
