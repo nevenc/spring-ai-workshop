@@ -11,30 +11,19 @@ spec:
     image: jdk21-environment:*
     files:
     - git:
-        #url: https://github.com/nevenc/spring-ai-workshop
-        url: https://github.com/timosalm/spring-ai-workshop
+        url: https://github.com/nevenc/spring-ai-workshop
         ref: origin/main
       includePaths:
       - /workshop/**
   session:
     namespaces:
-      budget: large
+      budget: xxx-large
       security:
-        token:
-          enabled: false
         policy: baseline
-    resources:
-      memory: 4Gi
     ingresses:
     - name: llama
       protocol: http
       host: llama.$(session_namespace)
-      port: 11434
-      authentication:
-        type: none
-    - name: deepseek-r1
-      protocol: http
-      host: deepseek-r1.$(session_namespace)
       port: 11434
       authentication:
         type: none
@@ -61,18 +50,24 @@ spec:
             containers:
               - name: ollama
                 image: ollama/ollama
+                args:
+                - serve
+                command:
+                - ollama
+                lifecycle:
+                  postStart:
+                    exec:
+                      command:
+                        - /bin/sh
+                        - '-c'
+                        - >
+                          ollama run llama3.1
                 ports:
                 - containerPort: 11434
-              - name: ollama-init
-                image: ollama/ollama
-                command: [ "/bin/bash" ]
-                args:
-                  - -c
-                  - |
-                    set -ex
-                    sleep 10
-                    ollama run llama3.1
-                    sleep infinity
+                resources:
+                  limits:
+                    cpu: 6000m
+                    memory: 12Gi
     - apiVersion: v1
       kind: Service
       metadata:
@@ -84,45 +79,6 @@ spec:
             targetPort: 11434
         selector:
           app: llama
-    - apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: deepseek-r1
-      spec:
-        selector:
-          matchLabels:
-            app: deepseek-r1
-        template:
-          metadata:
-            labels:
-              app: deepseek-r1
-          spec:
-            containers:
-              - name: ollama
-                image: ollama/ollama
-                ports:
-                - containerPort: 11434
-              - name: ollama-init
-                image: ollama/ollama
-                command: [ "/bin/bash" ]
-                args:
-                  - -c
-                  - |
-                    set -ex
-                    sleep 10
-                    ollama run deepseek-r1:8b
-                    sleep infinity
-    - apiVersion: v1
-      kind: Service
-      metadata:
-        name: deepseek-r1
-      spec:
-        type: ClusterIP
-        ports:
-          - port: 11434
-            targetPort: 11434
-        selector:
-          app: deepseek-r1
     - apiVersion: apps/v1
       kind: Deployment
       metadata:
