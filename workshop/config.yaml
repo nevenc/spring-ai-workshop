@@ -9,8 +9,9 @@ pathways:
       - 00-workshop-overview
       - 01-important-ai-concepts
       - 02-running-the-lab
-      - 03-step-1
-      - 04-step-2
-      - 05-step-3
-      - 06-step-4
+      - 03-hello-world
+      - 04-prompts
+      - 05-roles
+      - 06-embedding
+      - 07-retrieval-augmented-generation
       - 99-workshop-summary

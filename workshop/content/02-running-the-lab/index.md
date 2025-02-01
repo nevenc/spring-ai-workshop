@@ -114,7 +114,7 @@ Notice that we will be using `ollama` configuration, e.g.
 
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/resources/application.yaml
-description: find line where we define model we will use
+description: Find line where we define model to use
 text: "provider: ollama"
 ```
 
@@ -122,7 +122,7 @@ Notice the default Ollama base-url, e.g.
 
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/resources/application.yaml
-description: find the 
+description: Find the base-url host for ollama model 
 text: "localhost"
 start: 12
 stop: 14
