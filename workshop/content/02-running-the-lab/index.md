@@ -157,22 +157,8 @@ session: 2
 
 #### Run a simple chat query
 
-We will execute our first query matched in `SimpleChatController`, e.g.
+Let's run a simple chat query. Execute the following command in terminal to invoke call to LLM, e.g.
 
-```editor:open-file
-file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/chat/SimpleChatController.java
-description: Open SimpleChatController on line 21
-line: 21
-```
-
-Notice the line where we call the LLM model, e.g.
-
-```Java
-    // Simple ChatClient API call to your LLM model
-    return chatClient.prompt().user(query).call().content();
-```
-
-Execute the following command in terminal to invoke call to LLM, e.g.
 ```execute
 http localhost:8080/chat/simple
 ```
