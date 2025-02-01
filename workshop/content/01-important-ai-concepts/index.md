@@ -2,13 +2,13 @@
 title: Important AI Concepts
 ---
 
-Models
-
+Machine Learning Models
+Foundation Models
+Large Language Models
+Tokens
 Prompts
-
 Prompt Templates
-
 Embeddings
 
-Tokens
+
 

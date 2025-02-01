@@ -2,15 +2,16 @@
 title: Introduction to Spring AI
 ---
 
-** Spring AI [(Docs)](https://docs.spring.io/spring-ai/reference/)
+**Spring AI** [(Docs)](https://docs.spring.io/spring-ai/reference/)
+
+What is Spring AI?
+What is the problem it solves?
+What can I do with Spring AI?
+How does this fit into existing Spring projects?
+What are the main components and supported providers?
+Architecture diagram?
+Abstraction over different AI providers?
+What are some interesting use cases?
 
 
-```execute
-curl -X POST http://llama.{{< param session_namespace >}}:11434/api/generate \
-     -H "Content-Type: application/json" \
-     -d '{
-           "model": "llama3.1",
-           "prompt": "Tell me in as few words as possible what AI is.",
-           "stream": false
-         }'
-```
+
