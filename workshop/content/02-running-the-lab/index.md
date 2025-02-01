@@ -133,7 +133,7 @@ We need to substitute that with a working Ollama endpoint, e.g.
 ```editor:replace-text-selection
 file: ~/spring-ai-intro/src/main/resources/application.yaml
 description: replace with Ollama host base-url
-text: "llama..{{< param session_namespace >}}"
+text: "llama.{{< param session_namespace >}}"
 ```
 
 Notice that we are using `llama3.2` model in Ollama, e.g.

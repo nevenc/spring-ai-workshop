@@ -9,7 +9,7 @@ pathways:
       - 00-workshop-overview
       - 01-important-ai-concepts
       - 02-running-the-lab
-      - 03-hello-world
+      - 03-first-spring-ai-app
       - 04-prompts
       - 05-roles
       - 06-embedding
