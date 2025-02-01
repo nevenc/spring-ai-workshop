@@ -10,11 +10,8 @@ To discover the capabilities of **Spring AI**, we will use a sample
 The **Spring AI Intro** is a Spring Boot application that connects to LLM.
 In this lab we will use an **Ollama** hosted models locally:
 
-Ollama base-url is `http://llama.{{< param session_namespace >}}:11434/`
-Ollama model we will use is `llama3.2` and `nomic-embed-text`.
-
 The lab can be used with OpenAI LLMs, but you need to get an OPENAI_API_KEY
-and configure the lab in `application.yaml` correspondingly.
+and configure the lab in **application.yaml** correspondingly.
 
 #### Test Ollama Model
 
@@ -33,7 +30,7 @@ curl -s -X POST http://llama.{{< param session_namespace >}}:11434/api/generate 
 Since we are hosting the LLMs on CPU-based system, with no GPUs - the response might
 be a bit slow.
 
-You should see a JSON response from an `llama3.2` model hosted on local Ollama server:
+You should see a JSON response from an **llama3.2** model hosted on local Ollama server:
 
 ```json
 {
@@ -117,6 +114,7 @@ Notice that we will be using `ollama` configuration, e.g.
 
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/resources/application.yaml
+description: find line where we define model we will use
 text: "provider: ollama"
 ```
 
@@ -124,22 +122,28 @@ Notice the default Ollama base-url, e.g.
 
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/resources/application.yaml
-text: "base-url: http://localhost:11434/"
+description: find the 
+text: "localhost"
+start: 12
+stop: 14
 ```
 
 We need to substitute that with a working Ollama endpoint, e.g.
 
-```editor:replace-text-in-files
-files: ~/spring-ai-intro/src/main/resources/application.yaml
-pattern: "http://localhost"
-replacement: "http://llama..{{< param session_namespace >}}:11434/"
+```editor:replace-text-selection
+file: ~/spring-ai-intro/src/main/resources/application.yaml
+description: replace with Ollama host base-url
+text: "llama..{{< param session_namespace >}}"
 ```
 
 Notice that we are using `llama3.2` model in Ollama, e.g.
 
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/resources/application.yaml
-text: "model: llama3.2"
+description: observe the Ollama model we will use
+text: "llama3.2"
+start: 15
+stop: 17
 ```
 
 #### Run the application
@@ -157,7 +161,7 @@ We will execute our first query matched in `SimpleChatController`, e.g.
 
 ```editor:open-file
 file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/chat/SimpleChatController.java
-description: Open SimpleChatController
+description: Open SimpleChatController on line 21
 line: 21
 ```
 
@@ -173,7 +177,18 @@ Execute the following command in terminal to invoke call to LLM, e.g.
 http localhost:8080/chat/simple
 ```
 
-Observe the output.
+Observe the output, e.g.
+
+```text
+HTTP/1.1 200 
+Connection: keep-alive
+Content-Length: 101
+Content-Type: text/plain;charset=UTF-8
+Date: Sat, 01 Feb 2025 10:10:43 GMT
+Keep-Alive: timeout=60
+
+I'm an artificial intelligence model known as Llama. Llama stands for "Large Language Model Meta AI."
+```
 
 **Congratulations!** You have successfully called LLM model from your Spring Boot app.
 
