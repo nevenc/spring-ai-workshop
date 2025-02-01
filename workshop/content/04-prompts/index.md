@@ -36,7 +36,7 @@ line: 13
 ```
 
 ```editor:open-file
-file:~/spring-ai-intro/src/main/resources/prompts/joke.st
+file: ~/spring-ai-intro/src/main/resources/prompts/joke.st
 description: Open prompts/joke.st text file
 line: 1
 ```

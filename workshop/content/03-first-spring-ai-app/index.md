@@ -113,7 +113,7 @@ session: 2
 Let's run few queries, e.g.
 
 ```execute
-http localhost:8080/chat/simple?query="What is the city Stockholm known for? Give me top three things." 
+http localhost:8080/chat/simple?query="What is the city of Stockholm known for? Give me top three things." 
 ```
 
 ```text
