@@ -17,7 +17,7 @@ Try to be as concise and direct in crafting a great prompt for best results.
 
 It is possible to parameterize placeholders in your prompt templates with braces `{}`.
 
-```text
+```
 Tell me a joke about {topic}.
 Respond in {language} language.
 ```
@@ -68,7 +68,7 @@ Let's run few queries, e.g.
 http localhost:8080/chat/joke
 ```
 
-```text
+```
 Why was the pizza in a bad mood?
 Because it was feeling crusty! (get it?)
 ```
@@ -77,7 +77,7 @@ Because it was feeling crusty! (get it?)
 http 'localhost:8080/chat/joke?topic=Stockholm&lang=Swedish'
 ```
 
-```text
+```
 Varför gick maffian till Stockholm? Något med "bok och stek" såg ut att funka bra.
 
 Translation:

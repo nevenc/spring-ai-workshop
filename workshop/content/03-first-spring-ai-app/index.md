@@ -15,7 +15,7 @@ description: Open pom.xml configuration file
 line: 44
 ```
 
-```xml
+```
 	<dependency>
 		<groupId>org.springframework.ai</groupId>
 		<artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
@@ -27,7 +27,7 @@ There are other starters you could use, check the
 
 We have also configured the lab for possible connection to OpenAI, e.g.
 
-```XML
+```
 	<dependency>
 		<groupId>org.springframework.ai</groupId>
 		<artifactId>spring-ai-openai-spring-boot-starter</artifactId>
@@ -44,7 +44,7 @@ description: Open application.yaml configuration file
 line: 12
 ```
 
-```YAML
+```
 spring:
   application:
     name: spring-ai-intro
@@ -116,7 +116,7 @@ Let's run few queries, e.g.
 http localhost:8080/chat/simple?query="What is the city of Stockholm known for? Give me top three things." 
 ```
 
-```text
+```
 Stockholm, the capital city of Sweden, is known for many things. Here are three of its most notable claims to fame:
 
 1. **Architectural Marvels**: Stockholm is home to a plethora of stunning architectural styles and structures, including the iconic Old Town (Gamla Stan), the Vasa Museum, which houses the world's only preserved 17th-century ship, and the beautiful Royal Palace, with its grand halls and impressive art collection.
@@ -132,7 +132,7 @@ These are just a few examples of what makes Stockholm such a unique and captivat
 http localhost:8080/chat/simple?query="You are a comedian. Can you write a short poem about Stockholm?"
 ```
 
-```text
+```
 Here's a quick attempt:
 
 In Stockholm, the nights are long
@@ -155,7 +155,7 @@ Where the crazy parties never go unknown
 http localhost:8080/chat/simple?query="You are a haiku writer. Can you write a short haiku about Stockholm? In Swedish?" 
 ```
 
-```text
+```
 Here is a haiku about Stockholm in Swedish:
 
 Stockholms skarvar
