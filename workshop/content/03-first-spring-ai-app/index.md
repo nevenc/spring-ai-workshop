@@ -9,17 +9,17 @@ for connecting to various LLM models.
 
 Explore the `spring-ai-ollama-spring-boot-starter` in pom.xml, e.g.
 
-```editor:open-file
+```editor:select-matching-text
 file: ~/spring-ai-intro/pom.xml
-description: Open pom.xml configuration file
-line: 44
+description: Find line where we define starter
+text: "spring-ai-ollama-spring-boot-starter"
 ```
 
 ```
-	<dependency>
-		<groupId>org.springframework.ai</groupId>
-		<artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
-	</dependency>
+<dependency>
+	<groupId>org.springframework.ai</groupId>
+	<artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
+</dependency>
 ```
 
 There are other starters you could use, check the
@@ -27,11 +27,17 @@ There are other starters you could use, check the
 
 We have also configured the lab for possible connection to OpenAI, e.g.
 
+```editor:select-matching-text
+file: ~/spring-ai-intro/pom.xml
+description: Find line where we define starter
+text: "spring-ai-openai-spring-boot-starter"
 ```
-	<dependency>
-		<groupId>org.springframework.ai</groupId>
-		<artifactId>spring-ai-openai-spring-boot-starter</artifactId>
-	</dependency>
+
+```
+<dependency>
+	<groupId>org.springframework.ai</groupId>
+	<artifactId>spring-ai-openai-spring-boot-starter</artifactId>
+</dependency>
 ```
 
 #### Spring AI Configuration
@@ -68,10 +74,11 @@ It supports both synchronous and streaming programming model.
 
 The **ChatClient** is created using **ChatClient.Builder** object.
 
-```editor:open-file
+
+```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/chat/SimpleChatController.java
-description: Open SimpleChatController file
-line: 21
+description: Find line in SimpleChatController
+text: "private final ChatClient chatClient;"
 ```
 
 ```Java
