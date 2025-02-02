@@ -7,8 +7,8 @@ title: Running the lab
 To discover the capabilities of **Spring AI**, we will use a sample
 [Spring AI Intro](https://github.com/nevenc/spring-ai-intro) repository.
 
-The **Spring AI Intro** is a Spring Boot application that connects to LLM.
-In this lab we will use an **Ollama** hosted models locally:
+The **spring-ai-intro** is a Spring Boot application that connects to LLM.
+In this lab we will use an local **Ollama** hosted model.
 
 The lab can be used with OpenAI LLMs, but you need to get an OPENAI_API_KEY
 and configure the lab in **application.yaml** correspondingly.
@@ -27,8 +27,8 @@ curl -s -X POST http://llama.{{< param session_namespace >}}:11434/api/generate 
          }' | jq .
 ```
 
-Since we are hosting the LLMs on CPU-based system, with no GPUs - the response might
-be a bit slow.
+Since we are hosting the LLMs on a CPU-based system,
+with no GPUs - the response might be a bit slow.
 
 You should see a JSON response from an **llama3.2** model hosted on local Ollama server:
 
