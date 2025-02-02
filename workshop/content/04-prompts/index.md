@@ -9,13 +9,17 @@ instructs a language model (LLM) to generate a specific response. Prompts act
 as a bridge between user intent and AI output, shaping how the model interprets
 and responds to requests.
 
-**ChatClient** offers great abstractions and advanced constructs via `Advisor`
-to consider past interactions with the model, augment the prompt with additional
-contextual documents and introduce agentic behaviour.
+[ChatClient API](https://docs.spring.io/spring-ai/reference/api/chatclient.html)
+offers great abstractions and advanced constructs via
+[Advisors API](https://docs.spring.io/spring-ai/reference/api/advisors.html)
+to provide additional contextual data by intercepting, modifying and
+enhancing AI-driven interactions with the model.
 
-Try to be as concise and direct in crafting a great prompt for best results.
+Try to be as concise and direct as possible in crafting a great prompt for best results.
 
 It is possible to parameterize placeholders in your prompt templates with braces `{}`.
+
+Observe the example from the code:
 
 ```
 Tell me a joke about {topic}.

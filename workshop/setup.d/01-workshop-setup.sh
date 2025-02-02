@@ -7,10 +7,10 @@ jq ". + { \"editor.fontSize\": 14, \"files.exclude\": { \".**\": true}}" /home/e
 
 git clone https://github.com/nevenc/spring-ai-intro
 
+code-server --install-extension vmware.vscode-spring-boot
 code-server --install-extension redhat.java
 code-server --install-extension redhat.vscode-yaml
 code-server --install-extension vscjava.vscode-java-debug
 code-server --install-extension vscjava.vscode-maven
 code-server --install-extension vscjava.vscode-java-dependency
 code-server --install-extension vscjava.vscode-java-test
-code-server --install-extension vmware.vscode-spring-boot

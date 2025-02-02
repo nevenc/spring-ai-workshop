@@ -120,19 +120,17 @@ session: 2
 Let's run few queries, e.g.
 
 ```execute
-http localhost:8080/chat/simple?query="What is the city of Stockholm known for? Give me top three things." 
+http localhost:8080/chat/simple?query="List all nordics countries with their capital"
 ```
 
 ```
-Stockholm, the capital city of Sweden, is known for many things. Here are three of its most notable claims to fame:
+Here is the list of Nordic countries and their capitals:
 
-1. **Architectural Marvels**: Stockholm is home to a plethora of stunning architectural styles and structures, including the iconic Old Town (Gamla Stan), the Vasa Museum, which houses the world's only preserved 17th-century ship, and the beautiful Royal Palace, with its grand halls and impressive art collection.
-
-2. **Natural Beauty**: The city is situated on the shores of Lake Mälaren and the Baltic Sea, offering breathtaking views and access to numerous parks, gardens, and outdoor recreational areas. It's also close to the stunning Drottningholm Palace, a UNESCO World Heritage Site, and the picturesque archipelago.
-
-3. **Rich History and Culture**: Stockholm has a rich cultural heritage, with influences from its Viking past, its role as a major trading hub during the Hanseatic League era, and its position as the capital of Sweden. The city is home to numerous museums, galleries, and performance venues, including the legendary Royal Dramatic Theatre.
-
-These are just a few examples of what makes Stockholm such a unique and captivating city!
+1. Denmark - Copenhagen
+2. Finland - Helsinki
+3. Iceland - Reykjavik
+4. Norway - Oslo
+5. Sweden - Stockholm
 ```
 
 ```execute
