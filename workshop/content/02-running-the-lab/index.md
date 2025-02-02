@@ -151,9 +151,13 @@ stop: 17
 We can start the application in the second terminal:
 
 ```terminal:execute
-command: cd spring-ai-intro && ./mvnw spring-boot:run
+command: cd spring-ai-intro
 session: 2
 ```
+
+```terminal:execute
+command: ./mvnw clean package spring-boot:run
+session: 2
 
 #### Run a simple chat query
 
