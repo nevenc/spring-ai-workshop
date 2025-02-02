@@ -156,9 +156,15 @@ session: 2
 ```
 
 ```terminal:execute
-command: ./mvnw clean package spring-boot:run
+command: ./mvnw clean package
 session: 2
 ```
+
+```terminal:execute
+command: ./mvnw spring-boot:run
+session: 2
+```
+
 
 #### Run a simple chat query
 
