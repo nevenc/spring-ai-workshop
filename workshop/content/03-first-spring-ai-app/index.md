@@ -187,5 +187,7 @@ session: 2
 ```
 
 {{< note >}}
-**Congratulations!** You have finished the lab. Feel free to go to the [Workshop Summary](../99-workshop-summary)
+🏆 *Congratulations* 🏆
+👍 You have finished the lab!
+Feel free to continue with optional steps or go to [Workshop Summary](../99-workshop-summary)
 {{< /note >}}

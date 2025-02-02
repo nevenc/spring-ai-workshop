@@ -6,3 +6,7 @@ title: (Optional) Embedding Models
 * How do we use embedding model?
 * What is a VectorStore?
 * Show SimpleVectorStore
+
+{{< note >}}
+Feel free to continue with optional steps or go to [Workshop Summary](../99-workshop-summary)
+{{< /note >}}
