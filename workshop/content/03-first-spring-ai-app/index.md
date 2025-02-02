@@ -78,7 +78,7 @@ The **ChatClient** is created using **ChatClient.Builder** object.
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/chat/SimpleChatController.java
 description: Find line in SimpleChatController
-text: "private final ChatClient chatClient;"
+text: "builder.build()"
 ```
 
 ```Java
