@@ -1,5 +1,5 @@
 ---
-title: Role
+title: (Optional) Role
 ---
 
 The **Prompt** class acts as a container for an organized series of **Message** objects.

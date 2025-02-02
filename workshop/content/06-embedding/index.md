@@ -1,5 +1,5 @@
 ---
-title: Embedding Models
+title: (Optional) Embedding Models
 ---
 
 * What is an embedding model?
