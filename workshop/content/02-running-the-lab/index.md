@@ -171,7 +171,7 @@ http localhost:8080/chat/simple
 
 Observe the output, e.g.
 
-```text
+```
 HTTP/1.1 200 
 Connection: keep-alive
 Content-Length: 101
