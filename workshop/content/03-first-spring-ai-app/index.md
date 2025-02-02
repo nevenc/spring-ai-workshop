@@ -185,3 +185,7 @@ You can stop the application in the second terminal:
 ```terminal:interrupt
 session: 2
 ```
+
+{{< note >}}
+**Congratulations! You have finished the lab. Feel free to go to the [End of the Lab](../99-workshop-summary)
+{{< /note >}}

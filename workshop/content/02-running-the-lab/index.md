@@ -28,10 +28,10 @@ curl -s -X POST \
          }' | jq .
 ```
 
-{{< note >}}
+{{< warning >}}
 Since we are hosting the LLMs on a CPU-based system,
 with no GPUs - the response might be a bit slow.
-{{< /note >}}
+{{< /warning >}}
 
 You should see a JSON response from an **llama3.2** model hosted on local Ollama server:
 
