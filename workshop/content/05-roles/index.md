@@ -91,7 +91,7 @@ session: 2
 ```
 
 {{< note >}}
-Feel free to continue with optional steps or go to [Workshop Summary](../99-workshop-summary)
+Feel free to [continue with optional steps](../06-embedding) or go to [Workshop Summary](../99-workshop-summary)
 {{< /note >}}
 
 

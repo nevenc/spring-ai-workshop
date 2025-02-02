@@ -8,5 +8,5 @@ title: (Optional) Embedding Models
 * Show SimpleVectorStore
 
 {{< note >}}
-Feel free to continue with optional steps or go to [Workshop Summary](../99-workshop-summary)
+Feel free to [continue with optional steps](../07-retrieval-augmented-generation) or go to [Workshop Summary](../99-workshop-summary)
 {{< /note >}}
