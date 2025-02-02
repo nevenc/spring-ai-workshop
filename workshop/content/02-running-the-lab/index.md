@@ -18,7 +18,8 @@ and configure the lab in **application.yaml** correspondingly.
 Let's test that the Ollama model works in this environment, e.g.
 
 ```execute
-curl -s -X POST http://llama.{{< param session_namespace >}}:11434/api/generate \
+curl -s -X POST \
+     http://llama.{{< param session_namespace >}}:11434/api/generate \
      -H "Content-Type: application/json" \
      -d '{
            "model": "llama3.2",
@@ -27,8 +28,10 @@ curl -s -X POST http://llama.{{< param session_namespace >}}:11434/api/generate 
          }' | jq .
 ```
 
+{{< note >}}
 Since we are hosting the LLMs on a CPU-based system,
 with no GPUs - the response might be a bit slow.
+{{< /note >}}
 
 You should see a JSON response from an **llama3.2** model hosted on local Ollama server:
 
