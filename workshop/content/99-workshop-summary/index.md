@@ -17,7 +17,7 @@ Keep reading and exploring **Spring AI** topics further at
 
 Thank you!
 
-{{< warning >}}
+{{< note >}}
 
 🏆 *Congratulations* 🏆
 
@@ -31,4 +31,4 @@ Please enter your name and email in [this](https://forms.gle/EuZkmfsXMDMuWVFP8) 
 
 The raffle will take on February 5, 2025 at **Advania and Tanzu Spring Booth** at 15:00
 
-{{< /warning >}}
+{{< /note >}}
