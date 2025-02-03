@@ -144,10 +144,9 @@ start: 15
 stop: 17
 ```
 
-#### Run the application
+#### Running the Application
 
-We can start the application in the second terminal:
-
+Let's start the application in the second terminal.
 ```terminal:execute
 command: cd spring-ai-intro
 session: 2
@@ -158,10 +157,11 @@ command: ./mvnw spring-boot:run
 session: 2
 ```
 
+#### Execute a Simple Chat Query
 
-#### Run a simple chat query
+After the application has started successfully, we can run a simple chat query. 
 
-Let's run a simple chat query. Please go ahead and execute the following command in the terminal to invoke a call to LLM.
+Please go ahead and execute the following command in the terminal to invoke a call to the LLM.
 ```execute
 http localhost:8080/chat/simple
 ```
@@ -180,7 +180,7 @@ I'm an artificial intelligence model known as Llama. Llama stands for "Large Lan
 
 **Congratulations!** You have successfully called an LLM model from your Spring Boot application.
 
-#### Stop the application
+#### Stop the Application
 
 You can stop the application in the second terminal.
 ```terminal:interrupt
