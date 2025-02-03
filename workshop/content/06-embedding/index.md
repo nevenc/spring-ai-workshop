@@ -101,7 +101,7 @@ vector store loaded with 30 documents.
 {{< warning >}}
 🛑 Don't stop the application, because you will need to load the data again since
 we are using an in-memory **SimpleVectorStore** that is cleared on JVM exit.
-{{< /note >}}
+{{< /warning >}}
 
 
 ```section:begin
