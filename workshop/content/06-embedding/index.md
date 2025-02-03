@@ -149,5 +149,7 @@ title: Explore the log file
 Now that we have loaded documents into vector store, we can use that in our next lab - RAG!
 
 {{< note >}}
-Feel free to [continue with optional steps](../07-retrieval-augmented-generation) or go to [Workshop Summary](../99-workshop-summary)
+Feel free to [continue with optional steps](../07-retrieval-augmented-generation) or go to
+
+[🏁 Workshop Summary 🏁](../99-workshop-summary)
 {{< /note >}}
