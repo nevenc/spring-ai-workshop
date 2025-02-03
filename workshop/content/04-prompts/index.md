@@ -17,7 +17,7 @@ offers great abstractions and advanced constructs via
 to provide additional contextual data by intercepting, modifying and
 enhancing AI-driven interactions with the model.
 
-Try to be as concise and direct as possible in crafting a great prompt for best results.
+Try to be as concise and direct as possible in crafting an excellent prompt for the best results.
 
 It is possible to parameterize placeholders in your prompt templates with braces `{}`.
 
@@ -33,7 +33,7 @@ Read more about advanced prompt techniques in [Spring AI Documentation]
 
 #### Observe PromptChatController
 
-We can also store prompts in text files as `Resource` objects, e.g.
+We can also store prompts in text files as `Resource` objects.
 
 ```editor:open-file
 file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/chat/PromptChatController.java
@@ -59,7 +59,7 @@ line: 22
 
 #### Run the application (again)
 
-Let's run the application if you have stopped it in the previous lab, e.g.
+Let's run the application if you have stopped it in the previous lab.
 
 ```terminal:execute
 command: ./mvnw spring-boot:run
@@ -68,7 +68,7 @@ session: 2
 
 #### Execute simple queries
 
-Let's run few queries, e.g.
+Let's run a few queries.
 
 ```execute
 http localhost:8080/chat/joke
@@ -94,9 +94,9 @@ Note: The joke relies on a play on words, where "bok" means book but also sounds
 
 Feel free to play with various queries.
 
-#### Stop the application
+#### Stop the Application
 
-You can stop the application in the second terminal:
+You can now stop the application in the second terminal.
 
 ```terminal:interrupt
 session: 2
