@@ -20,7 +20,8 @@ title: Important AI Concepts
 
 **Large Language Models (LLMs):** AI models specifically designed to understand and generate human language.
 - *Prompts:* Input instructions or data given to the model to guide content generation.
-- *Tokens:* Basic units of data processed by models, such as words or parts of words in text generation.
+- *Tokens:* Basic units of data processed by models, such as words or parts of words in text generation.
+  
 ![How LLMS work](how-llms-work.png)
 LLMs process a specific number of tokens at a time using complex mathematical calculations to predict the most likely next token in a sequence.
 
