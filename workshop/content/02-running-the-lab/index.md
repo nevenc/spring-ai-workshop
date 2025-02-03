@@ -7,19 +7,19 @@ title: Running the lab
 To discover the capabilities of **Spring AI**, we will use a sample
 [Spring AI Intro](https://github.com/nevenc/spring-ai-intro) repository.
 
-The **spring-ai-intro** is a Spring Boot application that connects to LLM.
-In this lab we will use an local **Ollama** hosted model.
+The **spring-ai-intro** is a Spring Boot application that connects to an LLM.
+We will use a local **Ollama** hosted model in this lab.
 
-The lab can be used with OpenAI LLMs, but you need to get an OPENAI_API_KEY
-and configure the lab in **application.yaml** correspondingly.
+{{< note >}}
+The lab can be used with OpenAI LLMs, but you must have your own OpenAI API key
+and configure the lab in the **application.yaml** correspondingly.
+{{< /note >}}
 
-#### Test Ollama Model
+#### Trying out the Ollama Model
 
-Let's test that the Ollama model works in this environment, e.g.
-
+Let's validate that the Ollama model works in this environment by running the following request.
 ```execute
-curl -s -X POST \
-     http://llama.{{< param session_namespace >}}:11434/api/generate \
+curl -s -X POST http://llama.{{< param session_namespace >}}:11434/api/generate \
      -H "Content-Type: application/json" \
      -d '{
            "model": "llama3.2",
@@ -29,11 +29,10 @@ curl -s -X POST \
 ```
 
 {{< warning >}}
-Since we are hosting the LLMs on a CPU-based system,
-with no GPUs - the response might be a bit slow.
+The response might be a bit slow since we are hosting the LLMs on a CPU-based system without GPUs.
 {{< /warning >}}
 
-You should see a JSON response from an **llama3.2** model hosted on local Ollama server:
+You should see a JSON response from a **llama3.2** model hosted on a local Ollama server:
 
 ```json
 {
@@ -105,7 +104,7 @@ You should see a JSON response from an **llama3.2** model hosted on local Ollama
 
 #### Configure Application
 
-We need to configure the application details in `application.yaml`, e.g.
+We need to configure the application details in `application.yaml`.
 
 ```editor:open-file
 file: ~/spring-ai-intro/src/main/resources/application.yaml
@@ -113,37 +112,33 @@ description: Open application.yaml configuration file
 line: 3
 ```
 
-Notice that we will be using `ollama` configuration, e.g.
-
+Notice that we will be using `ollama` configuration.
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/resources/application.yaml
-description: Find line where we define model to use
+description: Highlight model provider
 text: "provider: ollama"
 ```
 
-Notice the default Ollama base-url, e.g. 
-
+Notice the default Ollama base url.
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/resources/application.yaml
-description: Find the base-url host for ollama model 
+description: Highlight the host URL for Ollama model 
 text: "localhost"
 start: 12
 stop: 14
 ```
 
-We need to substitute that with a working Ollama endpoint, e.g.
-
+We need to substitute that with a working Ollama endpoint.
 ```editor:replace-text-selection
 file: ~/spring-ai-intro/src/main/resources/application.yaml
-description: replace with Ollama host base-url
+description: Replace with environment-specific Ollama host URL
 text: "llama.{{< param session_namespace >}}"
 ```
 
-Notice that we are using `llama3.2` model in Ollama, e.g.
-
+Notice that we are using `llama3.2` model in Ollama.
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/resources/application.yaml
-description: observe the Ollama model we will use
+description: Highlight used model
 text: "llama3.2"
 start: 15
 stop: 17
@@ -166,14 +161,12 @@ session: 2
 
 #### Run a simple chat query
 
-Let's run a simple chat query. Execute the following command in terminal to invoke call to LLM, e.g.
-
+Let's run a simple chat query. Please go ahead and execute the following command in the terminal to invoke a call to LLM.
 ```execute
 http localhost:8080/chat/simple
 ```
 
-Observe the output, e.g.
-
+Observe the output.
 ```
 HTTP/1.1 200 
 Connection: keep-alive
@@ -185,12 +178,11 @@ Keep-Alive: timeout=60
 I'm an artificial intelligence model known as Llama. Llama stands for "Large Language Model Meta AI."
 ```
 
-**Congratulations!** You have successfully called LLM model from your Spring Boot app.
+**Congratulations!** You have successfully called an LLM model from your Spring Boot application.
 
 #### Stop the application
 
-You can stop the application in the second terminal:
-
+You can stop the application in the second terminal.
 ```terminal:interrupt
 session: 2
 ```
