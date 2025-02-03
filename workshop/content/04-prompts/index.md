@@ -65,6 +65,10 @@ command: ./mvnw spring-boot:run
 session: 2
 ```
 
+{{< note >}}
+Please wait for the Spring application to finish in lower terminal, e.g. **Started AiApplication in ...**
+{{< /note >}}
+
 #### Execute simple queries
 
 Let's run a few queries.

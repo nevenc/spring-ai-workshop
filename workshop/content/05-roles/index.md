@@ -48,6 +48,10 @@ command: ./mvnw spring-boot:run
 session: 2
 ```
 
+{{< note >}}
+Please wait for the Spring application to finish in lower terminal, e.g. **Started AiApplication in ...**
+{{< /note >}}
+
 #### Execute a Few Queries
 
 Let's run a few queries to illustrate the role and system prompt.

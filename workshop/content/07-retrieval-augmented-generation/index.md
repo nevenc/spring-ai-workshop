@@ -18,7 +18,7 @@ Notice, how we are configuring the prompt to **stuff-the-prompt**
 with relevant data later on in the `{context}`, e.g.
 
 ```editor:open-file
-file: ~/spring-ai-intro/src/main/resources/prompts/raffle-system.st
+file: ~/spring-ai-intro/src/main/resources/prompts/raffle.st
 description: Open prompts/raffle-system.st
 line: 1
 ```
@@ -26,19 +26,19 @@ line: 1
 Before we get to interact with the data, we need to retrieve relevant data, e.g.
 
 ```editor:select-matching-text
-file: ~/spring-ai-intro/src/main/java/src/dev/tanzu/demo/raffle/RaffleController.java
+file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/RaffleController.java
 description: Find line where we find all entries
-text: "var documents = vectorStore.similaritySearch(searchBuilder);"
+text: "var foundDocuments = vectorStore.similaritySearch(searchBuilder);"
 ```
 
 ```editor:select-matching-text
-file: ~/spring-ai-intro/src/main/java/src/dev/tanzu/demo/raffle/RaffleController.java
+file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/RaffleController.java
 description: Find line where we concatenate all entries into context string
-text: "String context = documents"
+text: "String context = foundDocuments"
 ```
 
 ```editor:select-matching-text
-file: ~/spring-ai-intro/src/main/java/src/dev/tanzu/demo/raffle/RaffleController.java
+file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/RaffleController.java
 description: Find line where we call the model to return the question asked
 text: "return chatClient"
 ```

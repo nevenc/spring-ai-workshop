@@ -86,6 +86,10 @@ command: ./mvnw spring-boot:run
 session: 2
 ```
 
+{{< note >}}
+Please wait for the Spring application to finish in lower terminal, e.g. **Started AiApplication in ...**
+{{< /note >}}
+
 #### Load the vector store
 
 Let's run a query to load the JSON data and store embeddings in the vector store, e.g.

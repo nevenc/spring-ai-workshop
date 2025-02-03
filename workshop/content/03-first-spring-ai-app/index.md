@@ -114,10 +114,18 @@ command: ./mvnw spring-boot:run
 session: 2
 ```
 
+{{< note >}}
+Please wait for the Spring application to finish in lower terminal, e.g. **Started AiApplication in ...**
+{{< /note >}}
+
 Here are a few sample queries to execute.
 ```execute
 http -b localhost:8080/chat/simple?query="List all nordics countries with their capital"
 ```
+
+{{< note >}}
+The responses might take a bit longer since we are running this model on a local CPU Ollama host
+{{< /note >}}
 
 ```
 Here is the list of Nordic countries and their capitals:
@@ -171,9 +179,7 @@ City's gentle light
 
 Feel free to play with various queries. 
 
-{{< note >}}
-The responses might take a bit longer since we are running this model on a local CPU Ollama host
-{{< /note >}}
+
 
 #### Stop the Application
 
