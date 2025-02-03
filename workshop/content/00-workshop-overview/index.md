@@ -4,6 +4,7 @@ title: Introduction to Spring AI
 
 Let's start with the editor process in the background while we go
 over the important Spring AI topics and concepts.
+
 ```editor:open-file
 file: ~/spring-ai-intro/pom.xml
 line: 1
