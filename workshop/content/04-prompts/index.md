@@ -3,7 +3,6 @@ title: (Optional) Prompts
 ---
 
 
-
 #### Promps and Prompt Engineering
 
 In AI-driven applications, a **prompt** is a carefully crafted input that
@@ -71,7 +70,7 @@ session: 2
 Let's run a few queries.
 
 ```execute
-http localhost:8080/chat/joke
+http -b localhost:8080/chat/joke
 ```
 
 ```
@@ -80,7 +79,7 @@ Because it was feeling crusty! (get it?)
 ```
 
 ```execute
-http 'localhost:8080/chat/joke?topic=Stockholm&lang=Swedish'
+http -b 'localhost:8080/chat/joke?topic=Stockholm&lang=Swedish'
 ```
 
 ```

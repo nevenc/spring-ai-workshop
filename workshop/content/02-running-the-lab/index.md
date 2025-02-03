@@ -163,18 +163,11 @@ After the application has started successfully, we can run a simple chat query.
 
 Please go ahead and execute the following command in the terminal to invoke a call to the LLM.
 ```execute
-http localhost:8080/chat/simple
+http -b localhost:8080/chat/simple
 ```
 
 Observe the output.
 ```
-HTTP/1.1 200 
-Connection: keep-alive
-Content-Length: 101
-Content-Type: text/plain;charset=UTF-8
-Date: Sat, 01 Feb 2025 10:10:43 GMT
-Keep-Alive: timeout=60
-
 I'm an artificial intelligence model known as Llama. Llama stands for "Large Language Model Meta AI."
 ```
 

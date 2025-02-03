@@ -116,7 +116,7 @@ session: 2
 
 Here are a few sample queries to execute.
 ```execute
-http localhost:8080/chat/simple?query="List all nordics countries with their capital"
+http -b localhost:8080/chat/simple?query="List all nordics countries with their capital"
 ```
 
 ```
@@ -130,7 +130,7 @@ Here is the list of Nordic countries and their capitals:
 ```
 
 ```execute
-http localhost:8080/chat/simple?query="You are a comedian. Can you write a short poem about Stockholm?"
+http -b localhost:8080/chat/simple?query="You are a comedian. Can you write a short poem about Stockholm?"
 ```
 
 ```
@@ -153,7 +153,7 @@ Where the crazy parties never go unknown
 ```
 
 ```execute
-http localhost:8080/chat/simple?query="You are a haiku writer. Can you write a short haiku about Stockholm? In Swedish?" 
+http -b localhost:8080/chat/simple?query="You are a haiku writer. Can you write a short haiku about Stockholm? In Swedish?" 
 ```
 
 ```
