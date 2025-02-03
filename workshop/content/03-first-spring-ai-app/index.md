@@ -7,7 +7,7 @@ title: First Spring AI Application
 Spring AI leverages Spring Boot starters to configure important libraries
 for connecting to various LLM models. 
 
-Explore the `spring-ai-ollama-spring-boot-starter` in pom.xml, e.g.
+Explore the `spring-ai-ollama-spring-boot-starter` in pom.xml.
 
 ```editor:select-matching-text
 file: ~/spring-ai-intro/pom.xml
@@ -22,10 +22,9 @@ text: "spring-ai-ollama-spring-boot-starter"
 </dependency>
 ```
 
-There are other starters you could use, check the
-[list of supported chat models](https://docs.spring.io/spring-ai/reference/api/chat/comparison.html).
+There are other starters you could use. Check the [list of supported chat models](https://docs.spring.io/spring-ai/reference/api/chat/comparison.html).
 
-We have also configured the lab for possible connection to OpenAI, e.g.
+We have also configured the lab for possible connection to OpenAI.
 
 ```editor:select-matching-text
 file: ~/spring-ai-intro/pom.xml
@@ -70,7 +69,7 @@ Notice, we configured the Ollama Chat model `llama3.2` and embedding model `nomi
 #### ChatClient API
 
 The **ChatClient** offers a fluent API for communicating with an AI Model.
-It supports both synchronous and streaming programming model.
+It supports both a synchronous and streaming programming model.
 
 The **ChatClient** is created using **ChatClient.Builder** object.
 
@@ -102,23 +101,20 @@ class SimpleChatController {
 }
 ```
 
-Notice how easy is to create ChatClients and send messages to your AI Models.
+Notice how easy it is to create ChatClients and send messages to your AI models.
 
 You can read more on [ChatClient API Documentation](https://docs.spring.io/spring-ai/reference/api/chatclient.html).
 
-#### Run the application
+#### Run the Application to Execute Simple Queries
 
-Let's run the application again, e.g.
+Let's rerun the application.
 
 ```terminal:execute
 command: ./mvnw spring-boot:run
 session: 2
 ```
 
-#### Execute simple queries
-
-Let's run few queries, e.g.
-
+Here are a few sample queries to execute.
 ```execute
 http localhost:8080/chat/simple?query="List all nordics countries with their capital"
 ```
@@ -175,13 +171,13 @@ City's gentle light
 
 Feel free to play with various queries. 
 
-Note that responses might take a bit longer since we are running
-this model on a local CPU Ollama host.
+{{< note >}}
+The responses might take a bit longer since we are running this model on a local CPU Ollama host
+{{< /note >}}
 
-#### Stop the application
+#### Stop the Application
 
-You can stop the application in the second terminal:
-
+You can now stop the application in the second terminal.
 ```terminal:interrupt
 session: 2
 ```
