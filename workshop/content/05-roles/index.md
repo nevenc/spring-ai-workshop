@@ -57,7 +57,7 @@ Please wait for the Spring application to finish in lower terminal, e.g. **Start
 Let's run a few queries to illustrate the role and system prompt.
 
 ```execute
-http localhost:8080/chat/fruit
+http -b localhost:8080/chat/fruit
 ```
 
 ```

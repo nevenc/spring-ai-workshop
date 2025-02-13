@@ -19,7 +19,7 @@ with relevant data later on in the `{context}`, e.g.
 
 ```editor:open-file
 file: ~/spring-ai-intro/src/main/resources/prompts/raffle.st
-description: Open prompts/raffle-system.st
+description: Open prompts/raffle.st
 line: 1
 ```
 
@@ -34,7 +34,7 @@ text: "var foundDocuments = vectorStore.similaritySearch(searchBuilder);"
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/RaffleController.java
 description: Find line where we concatenate all entries into context string
-text: "String context = foundDocuments"
+text: "String documents = foundDocuments"
 ```
 
 ```editor:select-matching-text

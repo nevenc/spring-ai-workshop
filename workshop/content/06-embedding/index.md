@@ -55,7 +55,7 @@ We are loading the JSON file on-demand through a **LoadController**, e.g.
 
 ```editor:open-file
 file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/LoadController.java
-description: Open data/entries.json
+description: Open LoadController.loadJson method
 line: 35
 ```
 
