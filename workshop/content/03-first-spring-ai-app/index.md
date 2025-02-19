@@ -55,7 +55,7 @@ spring:
     name: spring-ai-intro
   ai:
     ollama:
-        base-url: http://llama.{{< param session_namespace >}}:11434/
+        base-url: http://llama-proxy.{{< param workshop_namespace >}}:11434/
         chat:
           options:
             model: llama3.2

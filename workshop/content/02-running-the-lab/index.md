@@ -19,7 +19,7 @@ and configure the lab in the **application.yaml** correspondingly.
 
 Let's validate that the Ollama model works in this environment by running the following request.
 ```execute
-curl -s -X POST http://llama.{{< param session_namespace >}}:11434/api/generate \
+curl -s -X POST http://llama-proxy.{{< param workshop_namespace >}}:11434/api/generate \
      -H "Content-Type: application/json" \
      -d '{
            "model": "llama3.2",
@@ -80,7 +80,7 @@ We need to substitute that with a working Ollama endpoint.
 ```editor:replace-text-selection
 file: ~/spring-ai-intro/src/main/resources/application.yaml
 description: Replace with environment-specific Ollama host URL
-text: "llama.{{< param session_namespace >}}"
+text: "llama-proxy.{{< param workshop_namespace >}}"
 ```
 
 Notice that we are using `llama3.2` model in Ollama.
