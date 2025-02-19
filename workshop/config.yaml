@@ -6,7 +6,6 @@ pathways:
       title: "Workshop"
 
       steps:
-      - 00-conference-introduction
       - 00-workshop-overview
       - 01-important-ai-concepts
       - 02-running-the-lab
@@ -15,4 +14,3 @@ pathways:
       - 05-roles
       - 06-embedding
       - 07-retrieval-augmented-generation
-      - 99-workshop-summary
