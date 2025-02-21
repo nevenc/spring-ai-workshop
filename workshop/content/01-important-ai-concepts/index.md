@@ -31,7 +31,7 @@ LLMs process a specific number of tokens at a time using complex mathematical ca
 
 **Prompt Engineering:** Designing effective input prompts to guide a generative model's outputs (e.g. with Few-Shot Prompting, Chain-of-Thought Prompting, or In-Context Learning).
 
-**Function Calling:** Allows you to register your own functions to connect the model to the APIs of external systems.
+**Tool Calling:** Allows you to register your own systems or functions to connect the model to the APIs of external systems.
 
 **Retrieval-Augmented Generation (RAG)** enhances the output of models by incorporating relevant external information from external data sources.
 ![Retrieval Augmented Generation](rag.png)
