@@ -6,6 +6,7 @@ pathways:
       title: "Workshop"
 
       steps:
+      - 00-workshop-prerequisites
       - 00-workshop-overview
       - 01-important-ai-concepts
       - 02-running-the-lab
