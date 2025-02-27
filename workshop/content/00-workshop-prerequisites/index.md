@@ -35,7 +35,7 @@ Pick one and make sure to copy the key for use, later in the session
     "contents": [{
         "parts":[{"text": "Who are you"}]
         }]
-    }' | jq .candidates.[].content.parts.[].text
+    }' | jq .candidates[].content.parts[].text
     ````
 
 #### Hugging Face
