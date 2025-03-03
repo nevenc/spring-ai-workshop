@@ -17,7 +17,7 @@ Pick one and make sure to copy the key for use, later in the session
 #### Google Gemini
 
 - Log in to your Google account.
-- Visit the Google AI website (https://ai.google.dev)
+- Visit the Google AI website (https://aistudio.google.com/)
 - Click on the Solutions on the top left and select `Google AI Studio`
 - Click on the `Get API key` button, usually located in the top left corner of the page.
 - When the API Keys page loads, click on `Create API key`.
@@ -92,3 +92,13 @@ Please ask any staff if you run into any issues.
 
 **Enjoy the lab!**
 
+curl https://api.openai.com/v1/chat/completions -s \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $OPEN_API_KEY" \
+- d '{
+"model": "o3-mini",
+"store": false,
+"messages": [
+    {"role": "user", "content": "write a haiku about ai"}
+]
+}'

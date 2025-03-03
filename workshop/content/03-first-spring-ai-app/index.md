@@ -120,7 +120,7 @@ Please wait for the Spring application to finish in lower terminal, e.g. **Start
 
 Here are a few sample queries to execute.
 ```execute
-http -b localhost:8080/chat/simple?query="List all nordics countries with their capital"
+http -b localhost:8080/chat/simple?query="List all states of India with their capital"
 ```
 
 {{< note >}}
@@ -128,53 +128,94 @@ The responses might take a bit longer since we are running this model on a local
 {{< /note >}}
 
 ```
-Here is the list of Nordic countries and their capitals:
+Here is the list of states in India along with their capitals:
 
-1. Denmark - Copenhagen
-2. Finland - Helsinki
-3. Iceland - Reykjavik
-4. Norway - Oslo
-5. Sweden - Stockholm
+1. Andhra Pradesh - Amaravati
+2. Arunachal Pradesh - Itanagar
+3. Assam - Dispur
+4. Bihar - Patna
+5. Chhattisgarh - Raipur
+6. Goa - Panaji
+7. Gujarat - Gandhinagar
+8. Haryana - Chandigarh (administrative capital) and Sonipat (judicial capital)
+9. Himachal Pradesh - Shimla
+10. Jammu and Kashmir - Srinagar (summer capital) and Jammu (winter capital)
+11. Jharkhand - Ranchi
+12. Karnataka - Bengaluru
+13. Kerala - Thiruvananthapuram
+14. Madhya Pradesh - Bhopal
+15. Maharashtra - Mumbai
+16. Manipur - Imphal
+17. Meghalaya - Shillong
+18. Mizoram - Aizawl
+19. Nagaland - Kohima
+20. Odisha - Bhubaneswar
+21. Punjab - Chandigarh (administrative capital)
+22. Rajasthan - Jaipur
+23. Sikkim - Gangtok
+24. Tamil Nadu - Chennai
+25. Telangana - Hyderabad
+26. Tripura - Agartala
+27. Uttar Pradesh - Lucknow
+28. Uttarakhand - Dehradun
+29. West Bengal - Kolkata
+
+Additionally, there are 8 Union Territories in India:
+
+1. Andaman and Nicobar Islands - Port Blair
+2. Chandigarh - Chandigarh (administrative capital)
+3. Dadra and Nagar Haveli and Daman and Diu - Daman
+4. Delhi - New Delhi
+5. Jammu and Kashmir - Srinagar (summer capital) and Jammu (winter capital)
+6. Ladakh - Leh
+7. Lakshadweep - Kavaratti
+8. Puducherry - Puducherry
 ```
 
 ```execute
-http -b localhost:8080/chat/simple?query="You are a comedian. Can you write a short poem about Stockholm?"
+http -b localhost:8080/chat/simple?query="You are a comedian. Can you write a short poem about Pune, India?"
 ```
 
 ```
-Here's a quick attempt:
+Here's a quick attempt at a humorous poem about Pune:
 
-In Stockholm, the nights are long
-But the party never goes wrong
-The ABBA revival's in full swing
-And the Meatballs sing their funky thing
+In Pune, the land of tech and dreams,
+Where startups bloom like weird, awkward schemes.
+The Sahyadri hills rise high and steep,
+But the traffic's worse than your grandma's creep.
 
-I wander down the cobblestone street
-Where IKEA dreams and hipsters meet
-The harbor's where the boats all play
-While the hipsters sip coffee all day
+The Lavasa hill station, oh so grand,
+A weekend getaway for the wealthy band.
+But let's be real, it's just a bunch of flats,
+With roads that wind and never take it back.
 
-In Stockholm, I've lost my phone
-But found a new friend by the Stockholm Stone
-It's a weird town, but it feels like home
-Where the crazy parties never go unknown
+The Pune people, oh so bold and bright,
+Will tell you all about their latest fight.
+About the weather, or the prices too,
+But they'll always laugh with you.
+
+So if you ever find yourself in this land,
+Just remember, the humor's at your hand!
+For in Pune, laughter's just a tweet away,
+And the jokes are made for all, every single day!
 ```
 
 ```execute
-http -b localhost:8080/chat/simple?query="You are a haiku writer. Can you write a short haiku about Stockholm? In Swedish?" 
+http -b localhost:8080/chat/simple?query="You are a haiku writer. Can you write a short haiku about Pune? In Marati?" 
 ```
 
 ```
-Here is a haiku about Stockholm in Swedish:
+Here's a haiku in Marathi:
 
-Stockholms skarvar
-Guldtimmare i mörkret
-Nådens stads ljus
+पुण्याची रात्री (Punechya Raatri)
+सूरज सेतुवर (Surasetu Var)
+माणसांचा हळू (Manasach Halu)
 
 Translation:
-The Stockholm arches
-Golden trumpets in the dark
-City's gentle light
+
+Pune's night
+Sunrise over the bridge
+People's gentle dance
 ```
 
 Feel free to play with various queries. 
