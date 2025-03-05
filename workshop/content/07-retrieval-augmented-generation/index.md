@@ -1,5 +1,5 @@
 ---
-title: (Optional) Retrieval-Augmented Generation or RAG
+title: Retrieval-Augmented Generation or RAG
 ---
 
 **Retrieval-Augmented Generation** or **RAG** is an advanced AI technique
