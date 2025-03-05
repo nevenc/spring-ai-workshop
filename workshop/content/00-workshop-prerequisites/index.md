@@ -2,17 +2,17 @@
 title: Welcome to Barclays Spring Day 2025
 ---
 
-Welcome to the Barclays Spring Day event in sunny Pune, India.
+Welcome to the Barclays Spring Day event in Oxford of the East, Pune, India.
 
 ### Prerequisites
  
 - You can read Java code.
 - Familiarity with Spring
-- API Key to access to LLMS (Recommended)
+- API Key to access to LLMS (Optional)
 
-### How to Get API Key
+### How to Get API Key (Optional)
 
-Pick one and make sure to copy the key for use, later in the session
+Here are some of popular site that offer free API keys to test out the models. Its here for reference. If you decide to use one of them you have to update the `pom.xml` with the right boot starter and configure the `application.yaml` to reflect the same.
 
 #### Google Gemini
 
@@ -91,14 +91,3 @@ Pick one and make sure to copy the key for use, later in the session
 Please ask any staff if you run into any issues.
 
 **Enjoy the lab!**
-
-curl https://api.openai.com/v1/chat/completions -s \
--H "Content-Type: application/json" \
--H "Authorization: Bearer $OPEN_API_KEY" \
-- d '{
-"model": "o3-mini",
-"store": false,
-"messages": [
-    {"role": "user", "content": "write a haiku about ai"}
-]
-}'
