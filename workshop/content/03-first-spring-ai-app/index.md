@@ -131,7 +131,7 @@ The responses might take a bit longer since we are running this model on a local
 {{< /note >}}
 
 ```
-Here is the list of states in India along with their capitals:
+Here is a list of the states of India along with their capitals:
 
 1. Andhra Pradesh - Amaravati
 2. Arunachal Pradesh - Itanagar
@@ -140,39 +140,29 @@ Here is the list of states in India along with their capitals:
 5. Chhattisgarh - Raipur
 6. Goa - Panaji
 7. Gujarat - Gandhinagar
-8. Haryana - Chandigarh (administrative capital) and Sonipat (judicial capital)
-9. Himachal Pradesh - Shimla
-10. Jammu and Kashmir - Srinagar (summer capital) and Jammu (winter capital)
-11. Jharkhand - Ranchi
-12. Karnataka - Bengaluru
-13. Kerala - Thiruvananthapuram
-14. Madhya Pradesh - Bhopal
-15. Maharashtra - Mumbai
-16. Manipur - Imphal
-17. Meghalaya - Shillong
-18. Mizoram - Aizawl
-19. Nagaland - Kohima
-20. Odisha - Bhubaneswar
-21. Punjab - Chandigarh (administrative capital)
-22. Rajasthan - Jaipur
-23. Sikkim - Gangtok
-24. Tamil Nadu - Chennai
-25. Telangana - Hyderabad
-26. Tripura - Agartala
-27. Uttar Pradesh - Lucknow
-28. Uttarakhand - Dehradun
-29. West Bengal - Kolkata
+8. Haryana - Chandigarh
+9. Himachal Pradesh - Shimla (Summer), Dharamshala (Winter)
+10. Jharkhand - Ranchi
+11. Karnataka - Bengaluru
+12. Kerala - Thiruvananthapuram
+13. Madhya Pradesh - Bhopal
+14. Maharashtra - Mumbai
+15. Manipur - Imphal
+16. Meghalaya - Shillong
+17. Mizoram - Aizawl
+18. Nagaland - Kohima
+19. Odisha - Bhubaneswar
+20. Punjab - Chandigarh
+21. Rajasthan - Jaipur
+22. Sikkim - Gangtok
+23. Tamil Nadu - Chennai
+24. Telangana - Hyderabad
+25. Tripura - Agartala
+26. Uttar Pradesh - Lucknow
+27. Uttarakhand - Dehradun (Winter), Gairsain (Summer)
+28. West Bengal - Kolkata
 
-Additionally, there are 8 Union Territories in India:
-
-1. Andaman and Nicobar Islands - Port Blair
-2. Chandigarh - Chandigarh (administrative capital)
-3. Dadra and Nagar Haveli and Daman and Diu - Daman
-4. Delhi - New Delhi
-5. Jammu and Kashmir - Srinagar (summer capital) and Jammu (winter capital)
-6. Ladakh - Leh
-7. Lakshadweep - Kavaratti
-8. Puducherry - Puducherry
+Please note that some states have more than one capital for different seasons, as indicated above.
 ```
 
 ```execute
@@ -180,27 +170,20 @@ http -b localhost:8080/chat/simple?query="You are a comedian. Can you write a sh
 ```
 
 ```
-Here's a quick attempt at a humorous poem about Pune:
+In Pune where the auto-rickshaws zoom,  
+And traffic jams are a daily doom.  
+The weather's nice, not too much heat,  
+But try crossing the road—it's quite the feat!  
 
-In Pune, the land of tech and dreams,
-Where startups bloom like weird, awkward schemes.
-The Sahyadri hills rise high and steep,
-But the traffic's worse than your grandma's creep.
+Home of the vada pav and spicy misal,  
+You'll need a strong stomach, or perhaps a missile.  
+The Osho Ashram’s vibe is quite serene,  
+While FC Road's chaos is a daily routine.  
 
-The Lavasa hill station, oh so grand,
-A weekend getaway for the wealthy band.
-But let's be real, it's just a bunch of flats,
-With roads that wind and never take it back.
-
-The Pune people, oh so bold and bright,
-Will tell you all about their latest fight.
-About the weather, or the prices too,
-But they'll always laugh with you.
-
-So if you ever find yourself in this land,
-Just remember, the humor's at your hand!
-For in Pune, laughter's just a tweet away,
-And the jokes are made for all, every single day!
+With IT parks and wada architecture so grand,  
+Pune’s where the modern and old hand in hand.  
+So here’s to Pune, a city quite funny,  
+Where the roads are bumpy, but the people are sunny!
 ```
 
 ```execute

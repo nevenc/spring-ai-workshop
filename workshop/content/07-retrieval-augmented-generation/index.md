@@ -18,27 +18,27 @@ Notice, how we are configuring the prompt to **stuff-the-prompt**
 with relevant data later on in the `{context}`, e.g.
 
 ```editor:open-file
-file: ~/spring-ai-intro/src/main/resources/prompts/raffle.st
-description: Open prompts/raffle.st
+file: ~/spring-ai-intro/src/main/resources/prompts/feedback.st
+description: Open prompts/feedback.st
 line: 1
 ```
 
 Before we get to interact with the data, we need to retrieve relevant data, e.g.
 
 ```editor:select-matching-text
-file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/RaffleController.java
+file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/feedback/FeedbackController.java
 description: Find line where we find all entries
 text: "var foundDocuments = vectorStore.similaritySearch(searchBuilder);"
 ```
 
 ```editor:select-matching-text
-file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/RaffleController.java
+file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/feedback/FeedbackController.java
 description: Find line where we concatenate all entries into context string
 text: "String documents = foundDocuments"
 ```
 
 ```editor:select-matching-text
-file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/RaffleController.java
+file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/feedback/FeedbackController.java
 description: Find line where we call the model to return the question asked
 text: "return chatClient"
 ```
@@ -49,43 +49,32 @@ text: "return chatClient"
 Let's run a query to interact with the contextual data, e.g.
 
 ```execute
-http -b 'localhost:8080/raffle/chat'
+http -b 'localhost:8080/feedback/chat'
 ```
 
 ```
-I can pick a random name from the list. Here is the selected name:
+Here is a random feedback from the list:
 
-Fredrik Lindberg
+"The lab was great, but the waiting area could be improved." - Ravi Kumar
 ```
 
 Feel free to experiment with other questions, e.g.
 
 ```execute
-http -b 'localhost:8080/raffle/chat?question="what were postive comments on the feedback"'
+http -b 'localhost:8080/feedback/chat?question="what were postive comments on the feedback"'
 ```
 
 ```
-Based on the provided DOCUMENTS section, the positive comments on the feedback are:
+Here are some of the positive comments from the feedback:
 
-- "Good lab, but a few minor improvements could be made." (Anna Andersson)
-- "A strong lab experience with only minor flaws." (Mikael Eriksson)
-- "Very informative, minor improvements would perfect it." (Axel Sjoberg)
-- "Good lab, but consider more interactive elements." (Hans Bergstrom)
-- "The lab was exceptional and highly recommended." (Johan Pettersson)
-- "Very well organized and insightful." (Oskar Gustafsson)
-- "Excellent lab, exceeded all my expectations." (Fredrik Lindberg)
-- "Informative lab, but could benefit from more examples." (Anders Mattsson)
-- "Really enjoyed the lab, top-notch quality." (Eva Persson)
-- "Superb lab, highly informative and engaging." (Emil Svensson)
-- "Excellent lab, exceeded expectations." (Lars Svensson)
-- "Outstanding lab experience, very well done." (Olivia Eriksson)
-- "Exceptional lab, exceeded all expectations." (Helena Larsson)
-- "Perfect execution, I learned a lot." (Karin Nilsson)
-- "Solid session, though some parts felt rushed." (Viktor Karlsson)
-- "Superb content and delivery, very impressive." (Sven Larsson)
-- "Outstanding experience, very informative and engaging." (Erik Johansson)
-- "Very good overall, with just a couple of tweaks needed." (Maja Lund)
-- "Top-notch lab, brilliantly executed." (Klara Lindqvist)
-- "Brilliant session, very clear and effective." (Birgitta Olofsson)
+1. "Excellent lab, exceeded expectations." - Aarav Sharma
+2. "Amazing facilities and helpful staff!" - Ananya Singh
+3. "The lab was excellent, and the staff was very professional." - Akash Singh
+4. "Outstanding service and very clean facilities." - Rajesh Khanna
+5. "Amazing experience! The facilities were top-notch." - Anjali Nair
+6. "Highly recommend this lab for its professionalism!" - Arjun Patel
+7. "Fantastic experience! Highly recommended." - Pooja Reddy
+8. "The lab exceeded my expectations. Great service!" - Vikram Patel
+9. "Excellent service and knowledgeable staff!" - Priya Nair
 ```
 

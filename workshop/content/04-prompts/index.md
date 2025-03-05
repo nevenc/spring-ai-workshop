@@ -1,5 +1,5 @@
 ---
-title: (Optional) Prompts
+title: Prompts
 ---
 
 
@@ -83,16 +83,14 @@ Because it was feeling crusty! (get it?)
 ```
 
 ```execute
-http -b 'localhost:8080/chat/joke?topic=Stockholm&lang=Swedish'
+http -b 'localhost:8080/chat/joke?topic=Pune&lang=Marati'
 ```
 
 ```
-Varför gick maffian till Stockholm? Något med "bok och stek" såg ut att funka bra.
+पुणेकरांचं स्वभावच असं असतं की, "आम्ही पुण्याचे आहोत" हे सांगायला त्यांना पाच सेकंद लागतात, पण "पुणं हे महाराष्ट्रात आहे" हे सांगायला पाच मिनिटं लागतात!
 
 Translation:
-Why did the mafia go to Stockholm? Something with "book and steak" seemed to work well.
-
-Note: The joke relies on a play on words, where "bok" means book but also sounds like "bokstävel", which is an old-fashioned term for a gangster or a thug.
+It’s just the nature of Punekars (residents of Pune) that it takes them five seconds to say, ‘We are from Pune,’ but it takes them five minutes to say, ‘Pune is in Maharashtra!’”
 ```
 
 Feel free to play with various queries.

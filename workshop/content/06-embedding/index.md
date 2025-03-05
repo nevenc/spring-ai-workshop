@@ -1,5 +1,5 @@
 ---
-title: (Optional) Embedding Models
+title: Embedding Models
 ---
 
 #### Embedding Model
@@ -46,15 +46,15 @@ We will use data collected from a sample survey, to be used later on, e.g.
 See the example data, e.g.
 
 ```editor:open-file
-file: ~/spring-ai-intro/src/main/resources/data/entries.json
-description: Open data/entries.json
+file: ~/spring-ai-intro/src/main/resources/data/feedback.json
+description: Open data/feedback.json
 line: 1
 ```
 
 We are loading the JSON file on-demand through a **LoadController**, e.g.
 
 ```editor:open-file
-file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/LoadController.java
+file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/feedback/LoadController.java
 description: Open LoadController.loadJson method
 line: 35
 ```
@@ -63,13 +63,13 @@ We are using **JsonReader** to get a list of **Document** objects
 that we will store in **SimpleVectorStore**, e.g.
 
 ```editor:select-matching-text
-file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/LoadController.java
+file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/feedback/LoadController.java
 description: Find line where we read a list of documents
 text: "List<Document> documents = reader.get();"
 ```
 
 ```editor:select-matching-text
-file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/raffle/LoadController.java
+file: ~/spring-ai-intro/src/main/java/dev/tanzu/demo/feedback/LoadController.java
 description: Find line where we save the vector store
 text: "this.vectorStore.add(documents);"
 ```
@@ -95,11 +95,11 @@ Please wait for the Spring application to finish in lower terminal, e.g. **Start
 Let's run a query to load the JSON data and store embeddings in the vector store, e.g.
 
 ```execute
-http -b localhost:8080/raffle/load/json
+http -b localhost:8080/feedback/load/json
 ```
 
 ```
-vector store loaded with 30 documents.
+vector store loaded with 25 documents.
 ```
 
 {{< warning >}}
