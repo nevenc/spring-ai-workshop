@@ -7,24 +7,7 @@ title: First Spring AI Application
 Spring AI leverages Spring Boot starters to configure important libraries
 for connecting to various LLM models. 
 
-Explore the `spring-ai-ollama-spring-boot-starter` in pom.xml.
-
-```editor:select-matching-text
-file: ~/spring-ai-intro/pom.xml
-description: Find line where we define starter
-text: "spring-ai-ollama-spring-boot-starter"
-```
-
-```
-<dependency>
-	<groupId>org.springframework.ai</groupId>
-	<artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
-</dependency>
-```
-
-There are other starters you could use. Check the [list of supported chat models](https://docs.spring.io/spring-ai/reference/api/chat/comparison.html).
-
-We have also configured the lab for possible connection to OpenAI.
+Explore the `spring-ai-openai-spring-boot-starter` in pom.xml.
 
 ```editor:select-matching-text
 file: ~/spring-ai-intro/pom.xml
@@ -39,8 +22,28 @@ text: "spring-ai-openai-spring-boot-starter"
 </dependency>
 ```
 
+There are other starters you could use. Check the [list of supported chat models](https://docs.spring.io/spring-ai/reference/api/chat/comparison.html).
+
+We have also configured the lab for possible connection to Ollama.
+
+```editor:select-matching-text
+file: ~/spring-ai-intro/pom.xml
+description: Find line where we define starter
+text: "spring-ai-ollama-spring-boot-starter"
+```
+
+```
+<dependency>
+	<groupId>org.springframework.ai</groupId>
+	<artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
+</dependency>
+```
+
 #### Spring AI Configuration
 
+We have configured eveything we need to connect to OpenAI. If you are using Ollama follow the configuration.
+
+#### Ollam Configuration (Optional)
 Spring AI can be configured through Spring properties in `application.yaml` file.
 
 ```editor:open-file

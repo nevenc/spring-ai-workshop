@@ -20,6 +20,10 @@ Lets configure the OpenAI key to help with the lab. Its a long string aplogies y
 
 export OPENAI_API_KEY=`<check-with-insturctor>`
 
+{{< note >}}
+Export the OPENAI_API_KEY on both terminal windows, as we would be running commands on both.
+{{< note >}}
+
 ```execute
 curl https://api.openai.com/v1/chat/completions \
 -H "Content-Type: application/json" \
@@ -121,18 +125,14 @@ Notice the default OpenAI base url.
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/resources/application.yaml
 description: Highlight the URL for OpenAI model.
-text: "https://api.openai.com/"
-start: 21
-stop: 42
+text: "api.openai.com"
 ```
 
 Notice we are reading the OpenAI API key from environment variable.
 ```editor:select-matching-text
 file: ~/spring-ai-intro/src/main/resources/application.yaml
 description: Highlight the OpenAI API key.
-text: "${OPENAI_API_KEY}"
-start: 22
-stop: 35
+text: "OPENAI_API_KEY"
 ```
 
 #### Ollam configuration (Optional)
