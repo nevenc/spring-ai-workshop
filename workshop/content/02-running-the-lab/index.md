@@ -22,7 +22,7 @@ export OPENAI_API_KEY=`<check-with-insturctor>`
 
 {{< note >}}
 Export the OPENAI_API_KEY on both terminal windows, as we would be running commands on both.
-{{< note >}}
+{{< /note >}}
 
 ```execute
 curl https://api.openai.com/v1/chat/completions \
