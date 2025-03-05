@@ -78,3 +78,9 @@ Here are some of the positive comments from the feedback:
 9. "Excellent service and knowledgeable staff!" - Priya Nair
 ```
 
+{{< note >}}
+🏆 *Congratulations* 🏆
+
+👍 You have finished the lab! 👍
+
+{{< /note >}}
