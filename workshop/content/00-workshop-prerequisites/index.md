@@ -12,7 +12,7 @@ Welcome to the Barclays Spring Day event in Oxford of the East, Pune, India.
 
 ### How to Get API Key (Optional)
 
-Here are some of the popular site that offer free API keys to test out the models. Its here for reference. If you decide to use one of them you have to update the `pom.xml` with the right boot starter and configure the `application.yaml` to reflect the same.
+Here are some of the popular sites that offer free API keys to test out the models. It's here for reference. If you decide to use one of them you have to update the `pom.xml` with the right boot starter and configure the `application.yaml` to reflect the same.
 
 #### Google Gemini
 
@@ -29,7 +29,7 @@ Here are some of the popular site that offer free API keys to test out the model
     export LLM_API_KEY=`<YOUR API KEY>`
     ````execute
     curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$LLM_API_KEY" \
-    -H 'Content-Type: application/json' \
+    -sH 'Content-Type: application/json' \
     -X POST \
     -d '{
     "contents": [{
@@ -57,7 +57,7 @@ Here are some of the popular site that offer free API keys to test out the model
     ````execute
     curl https://api-inference.huggingface.co/models/openai-community/gpt2 \
     -X POST \
-    -H "Content-Type: application/json" \
+    -sH "Content-Type: application/json" \
     -H "Authorization: Bearer $LLM_API_KEY" \
     -d '{"inputs": "Who are you"}' | jq .[].generated_text
     ````
@@ -77,7 +77,7 @@ Here are some of the popular site that offer free API keys to test out the model
     export LLM_API_KEY=`<YOUR API KEY>`
     ````execute
     curl https://api.groq.com/openai/v1/chat/completions -s \
-    -H "Content-Type: application/json" \
+    -sH "Content-Type: application/json" \
     -H "Authorization: Bearer $LLM_API_KEY" \
     -d '{
     "model": "llama-3.3-70b-versatile",
