@@ -12,7 +12,7 @@ Welcome to the Barclays Spring Day event in Oxford of the East, Pune, India.
 
 ### How to Get API Key (Optional)
 
-Here are some of popular site that offer free API keys to test out the models. Its here for reference. If you decide to use one of them you have to update the `pom.xml` with the right boot starter and configure the `application.yaml` to reflect the same.
+Here are some of the popular site that offer free API keys to test out the models. Its here for reference. If you decide to use one of them you have to update the `pom.xml` with the right boot starter and configure the `application.yaml` to reflect the same.
 
 #### Google Gemini
 
@@ -62,7 +62,7 @@ Here are some of popular site that offer free API keys to test out the models. I
     -d '{"inputs": "Who are you"}' | jq .[].generated_text
     ````
 
-#### Gorq
+#### Groq
 
 - Visit the Groq Console website at (https://console.groq.com/)
 - Sign up for a new account if you don't have one, or log in to your existing account.

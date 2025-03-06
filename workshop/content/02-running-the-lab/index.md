@@ -11,18 +11,16 @@ The **spring-ai-intro** is a Spring Boot application that connects to an LLM.
 We will use **OpenAI** in this lab.
 
 {{< note >}}
-The lab can be used with Ollama hosted model, but it will be slow as you will be sharing the model with everyone in the lab. If you do decide to use Ollama you have to configure the lab in the **application.yaml** correspondingly.
+The lab can be used with a hosted model, but it will be slow as it is being shared across all the participants in the lab. If you do decide to use Ollama you have to configure the lab in the **application.yaml** correspondingly.
 {{< /note >}}
 
 #### Test OpenAI access
 
-Lets configure the OpenAI key to help with the lab. Its a long string aplogies you would have type it in as their is no better way to share it. 
+OpenAI key is already configured for this lab, verify its presence.
 
-export OPENAI_API_KEY=`<check-with-insturctor>`
-
-{{< note >}}
-Export the OPENAI_API_KEY on both terminal windows, as we would be running commands on both.
-{{< /note >}}
+```exectue 
+echo $OPENAI_API_KEY
+```
 
 ```execute
 curl https://api.openai.com/v1/chat/completions \
