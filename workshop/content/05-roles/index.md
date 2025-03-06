@@ -44,7 +44,7 @@ line: 25
 Let's run the application if you have stopped it in the previous lab.
 
 ```terminal:execute
-command: ./mvnw spring-boot:run
+command: ./mvnw clean spring-boot:run
 session: 2
 ```
 

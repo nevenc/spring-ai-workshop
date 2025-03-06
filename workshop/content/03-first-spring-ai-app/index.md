@@ -113,7 +113,7 @@ You can read more on [ChatClient API Documentation](https://docs.spring.io/sprin
 Let's rerun the application.
 
 ```terminal:execute
-command: ./mvnw spring-boot:run
+command: ./mvnw clean spring-boot:run
 session: 2
 ```
 

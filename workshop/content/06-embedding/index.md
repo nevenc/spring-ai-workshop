@@ -82,7 +82,7 @@ a vector store, but for the purpose of this lab, we will keep it simple.
 Let's run the application if you have stopped it in the previous lab, e.g.
 
 ```terminal:execute
-command: ./mvnw spring-boot:run
+command: ./mvnw clean spring-boot:run
 session: 2
 ```
 

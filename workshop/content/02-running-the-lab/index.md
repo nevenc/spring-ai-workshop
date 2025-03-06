@@ -169,7 +169,7 @@ session: 2
 ```
 
 ```terminal:execute
-command: ./mvnw spring-boot:run
+command: ./mvnw clean spring-boot:run
 session: 2
 ```
 
