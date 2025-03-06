@@ -18,7 +18,7 @@ The lab can be used with a hosted model, but it will be slow as it is being shar
 
 OpenAI key is already configured for this lab, verify its presence.
 
-```exectue 
+```execute 
 echo $OPENAI_API_KEY
 ```
 
